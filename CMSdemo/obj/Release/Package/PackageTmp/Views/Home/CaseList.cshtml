@@ -1,0 +1,204 @@
+﻿    <script>
+
+        $(document).ready(function () {
+
+            $('#caseList').DataTable({
+
+                "paging": false,
+                "order": [[ 1, "asc" ]],
+                "info": false,
+                "filter": false
+
+            });
+
+        });
+
+    </script>
+<style>
+#caseList a {
+    color: blue;
+    text-align: center;
+}
+    
+
+</style>
+<h3 style='padding-left: 20px'>My Cases</h3>
+<div class="container-fluid" id="theBody">
+    <div class="row">
+        <div class="col-sm-12" >
+
+<table width="100%" class="display" id="caseList" cellspacing="0">
+
+        <thead>
+
+            <tr>
+                <th></th>
+                <th>Name</th>
+
+                <th>SSN</th>
+
+                <th>DOB</th>
+
+                <th>Case #</th>
+
+                <th>DOI</th>
+
+                <th>Claim #</th>
+
+            </tr>
+
+        </thead>
+
+ 
+
+ 
+
+        <tbody>
+
+            <tr>
+                <td><a href=".">Select</a></td>
+                <td>Nixon, Tiger</td>
+
+                <td>123-765-9871</td>
+
+                <td data-order="1303686000">4/1/1963</td>
+
+                <td>LDV67DER</td>
+
+                <td data-order="4">2/3/2015</td>
+
+                <td>273625343290</td>
+
+            </tr>
+
+            <tr>
+                <td><a href=".">Select</a></td>
+                <td>Rockwell, Beth</td>
+
+                <td>777-222-1234</td>
+
+                <td data-order="1303686000">3/19/1959</td>
+
+                <td>KS67SSD</td>
+
+                <td data-order="5">3/24/2015</td>
+
+                <td>29991778</td>
+
+            </tr>
+
+            <tr>
+                <td><a href=".">Select</a></td>
+                <td>Fante, Sue</td>
+
+                <td>222-888-1234</td>
+
+                <td data-order="1303686000">1/9/1959</td>
+
+                <td>JJJ999GG</td>
+
+                <td data-order="3">1/20/2015</td>
+
+                <td>9823749999</td>
+
+            </tr>
+
+            <tr>
+                <td><a  href="@Url.Action("CarePlan", "CarePlan")">Select</a></td>
+                <td>Morgan, Ross</td>
+
+                <td>567-765-2345</td>
+
+                <td data-order="1303686000">7/15/1955</td>
+
+                <td>LDHHH66D</td>
+
+                <td data-order="7">5/3/2015</td>
+
+                <td>76436283768</td>
+
+            </tr>
+
+            <tr>
+                <td><a href=".">Select</a></td>
+                <td>Slick, Grace</td>
+
+                <td>333-765-7235</td>
+
+                <td data-order="1303686000">3/1/1955</td>
+
+                <td>KSKS777S</td>
+
+                <td data-order="2">11/11/2014</td>
+
+                <td>7657775444</td>
+            </tr>
+
+            <tr>
+                <td><a href="." id="setupRef"><b>Select</b></a></td>
+                <td><b>Barnes, Rich</b></td>
+
+                <td><b>222-647-1211</b></td>
+
+                <td data-order="1303686000"><b>3/1/1958</b></td>
+
+                <td><b>HSHSY66H</b></td>
+
+                <td data-order="3"><b>1/19/2015</b></td>
+
+                <td><b>233332999</b></td>
+            </tr>
+
+            <tr>
+                <td><a href=".">Select</a></td>
+                <td>Kingsley, Bob</td>
+
+                <td>333-111-1291</td>
+
+                <td data-order="1303686000">7/1/1958</td>
+
+                <td>FSFTT55G</td>
+
+                <td data-order="1">8/19/2014</td>
+
+                <td>23782378279</td>
+            </tr>
+
+            <tr>
+                <td><a href=".">Select</a></td>
+                <td>Costa, Gus</td>
+
+                <td>373-555-1291</td>
+
+                <td data-order="1303686000">7/11/1958</td>
+
+                <td>DD34SST</td>
+
+                <td data-order="6">4/19/2015</td>
+
+                <td>347374599</td>
+            </tr>
+
+            <tr>
+                <td><a href=".">Select</a></td>
+                <td>Wagner, Greg</td>
+
+                <td>546-555-2342</td>
+
+                <td data-order="1303686000">7/11/1957</td>
+
+                <td>DKKKKK77</td>
+
+                <td data-order="5">4/9/2015</td>
+
+                <td>535366767</td>
+            </tr>
+
+
+
+
+        </tbody>
+
+    </table>        </div>
+    </div>
+</div>

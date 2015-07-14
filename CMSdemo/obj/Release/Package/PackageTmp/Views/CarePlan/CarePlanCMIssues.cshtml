@@ -1,0 +1,103 @@
+﻿    <script>
+
+        $(document).ready(function () {
+
+            $('#cmIssuesList').DataTable({
+
+                "paging": false,
+                "order": [[ 1, "asc" ]],
+                "info": false,
+                "filter": false
+
+            });
+
+            $(".breadcrmb").empty();
+            var url = '@Url.Action("CaseMain","Case")';
+            var urlCP = '@Url.Action("CarePlan","CarePlan")';
+            $(".breadcrmb").append("<nav class='breadcrmb'><a href=" + url + " style='color: blue;cursor: pointer;'>Home</a> → <a href=" + urlCP + " style='color: blue;cursor: pointer;'>Care Plan</a>  →  Case Management Issues</nav>");
+            $("#caseHeaderId").append("<ul style='list-style-type:none'><li>Claimant:<span>Ross Morgan</span></li><li>Case: <a hfre='.' style='color: blue;cursor: pointer;'><span>ZS08T5</span></a></li></ul>");
+
+            $('#my-link').click();
+
+        });
+
+    </script>
+<style>
+    #caseList a {
+        color: blue;
+        text-align: center;
+    }
+    
+
+</style>
+<nav class="breadcrmb"></nav>
+<div style="height: 40px;background: #e2e2e2"></div>
+<h3 style='padding-left: 20px'>Case Management Issues</h3>
+<div class="container-fluid" id="theBody">
+    <div class="row">
+        <div class="col-sm-12" >
+<button id="addCMI">Add</button>
+
+<table width="100%" class="display" id="cmIssuesList" cellspacing="0">
+
+        <thead>
+
+            <tr>
+                <th>Issues</th>
+
+                <th>Date Identified</th>
+
+                <th>Date Resolved</th>
+                <th></th>
+                <th></th>
+
+            </tr>
+
+        </thead>
+
+ 
+
+ 
+
+        <tbody>
+
+            <tr>
+                <td>Identification of complex medical Issues</td>
+
+                <td data-order="4">2/3/2015</td>
+                <td data-order="4">2/4/2015</td>
+
+                <td><a href="@Url.Action("CarePlanCMIssueEdit", "CarePlan")"><img src="~/Images/Edit.png" /></a></td>
+                <td><img src="~/Images/Delete.png" /></td>
+
+            </tr>
+
+            <tr>
+                <td>Knowledge deficit related to amnesia</td>
+
+                <td data-order="4">2/12/2015</td>
+                <td data-order="4">2/13/2015</td>
+
+                <td><img src="~/Images/Edit.png" /></td>
+                <td><img src="~/Images/Delete.png" /></td>
+
+            </tr>
+
+            <tr>
+                <td>Lack of driver's license due to legal matters</td>
+
+                <td data-order="4">2/12/2015</td>
+                <td data-order="4">2/13/2015</td>
+
+                <td><img src="~/Images/Edit.png" /></td>
+                <td><img src="~/Images/Delete.png" /></td>
+
+            </tr>
+
+
+
+        </tbody>
+
+    </table>        </div>
+    </div>
+</div>

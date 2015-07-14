@@ -1,0 +1,49 @@
+﻿    <script>
+
+        $(document).ready(function () {
+
+            $(".breadcrmb").empty();
+            var url = '@Url.Action("CaseMain","Case")';
+            var urlCP = '@Url.Action("CarePlan","CarePlan")';
+            var urlCPIssues = '@Url.Action("CarePlanCMIssues","CarePlan")';
+            $(".breadcrmb").append("<nav class='breadcrmb'><a href=" + url + " style='color: blue;cursor: pointer;'>Home</a> → <a href=" + urlCP + " style='color: blue;cursor: pointer;'>Care Plan</a>  →  <a href=" + urlCPIssues + " style='color: blue;cursor: pointer;'>Case Management Issues</a>  → Case Management Issue Edit </nav>");
+            $("#caseHeaderId").append("<ul style='list-style-type:none'><li>Claimant:<span>Ross Morgan</span></li><li>Case: <a hfre='.' style='color: blue;cursor: pointer;'><span>ZS08T5</span></a></li></ul>");
+
+            $('#my-link').click();
+
+        });
+
+    </script>
+<nav class="breadcrmb"></nav>
+<div style="height: 40px;background: #e2e2e2"></div>
+<h3 style='padding-left: 20px'>Case Management Issue Edit</h3>
+      <form>
+          <fieldset>
+              <legend>Text input</legend>
+                  <label>Suggestions:</label>
+                  <select>
+                    <option value=""></option>
+                    <option >Sugestion 1</option>
+                    <option >Sugestion 2</option>
+                    <option >Sugestion 3</option>
+                    <option >Sugestion 4</option>
+                    <option >Sugestion 5</option>
+                    <option >Sugestion 6</option>
+                    <option >Sugestion 7</option>
+                    <option >Sugestion 8</option>
+                    <option >Sugestion 9</option>
+                  </select> 
+              <label>Issue:</label>
+              <textarea name="Text1" cols="4" rows="5" ></textarea>
+              <label>Date Identified:</label>
+              <input type="text" value="5/23/2015"/>
+              <label>Date Resolved:</label>
+              <input type="text" value="5/24/2015"/>
+              <div style="text-align:center;margin:auto;">
+              <button style="margin-left:  180px; height: 25px;clear: both;float: left; margin-bottom: 20px; text-align:center; vertical-align: middle">Save</button>
+              <button id="close-btn-add" style="height: 25px;padding-left: 20px;float: left;margin-bottom: 20px;text-align:center;vertical-align: middle">Close</button>
+                  </div>
+          </fieldset>
+    
+      </form>
+

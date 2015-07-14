@@ -1,0 +1,24 @@
+﻿    
+<script>
+
+    $(document).ready(function () {
+
+        var urlCMI = '@Url.Action("CarePlanCMIssues","CarePlan")';
+
+            $('#my-link').click();
+            $("#my-panel").append("</br></br></br></br><a class='menuLink' href='.'>Anticipated Case Results</a>");
+            $("#my-panel").append("</br></br><a class='menuLink' href=" + urlCMI + ">Case Management Issues</a>");
+            $("#my-panel").append("</br></br><a class='menuLink' href='.'>Case Management Goals</a>");
+            $("#my-panel").append("</br></br><a class='menuLink' href='.'>Resources Utilized</a>");
+            $("#my-panel").append("</br></br><a class='menuLink' href='.'>Medications</a>");
+            $("#my-panel").append("</br></br><a class='menuLink' href='.'>Medication Assesment</a>");
+            $("#my-panel").append("</br></br><a class='menuLink' href='.'>Medication Reconciliation</a>");
+            $("#my-panel").append("</br></br><a class='menuLink' href='.'>Pain Management</a>");
+            $("#my-panel").append("</br></br><a class='menuLink' href='.'>Procedures / Surgery</a>");
+            $("#my-panel").append("</br></br><a class='menuLink' href='.'>Recommendations</a>");
+
+            $("#caseHeaderId").append("<ul style='list-style-type:none'><li>Claimant: <span>Ross Morgan</span></li><li>Case: <a href='.' style='color: blue;cursor: pointer;'><span>ZS08T5</span></a></li></ul>");
+        });
+
+    </script>
+<nav class="breadcrmb"><a  href="@Url.Action("CaseMain", "Case")" style="color:blue">Home</a> → Care Plan</nav>

@@ -1,0 +1,56 @@
+﻿<script>
+    $(document).ready(function() {
+
+//            $('#my-link').click();
+//        $("#my-panel").append("<br/><br/><a id='advLink' class='menuLink' href=" + advancedURl + ">Advanced...</a>");
+        //        $("#my-panel").append("<br/><br/><a class='menuLink' href=" + advancedURl + ">Advanced...</a>");
+        mainItems();
+        $('#my-link').click();
+        $('#advLink').click(advancedItems);
+        $("#caseHeaderId").append("<ul style='list-style-type:none'><li>Claimant:<span>Ross Morgan</span></li><li>Case: <a href='.' style='color: blue;cursor: pointer;'><span>ZS08T5</span></a></li></ul>");
+
+    });
+
+    function advancedItems() {
+        $("#my-panel").empty();
+
+        $("#my-panel").append("<img src='../Images/Logo.jpg' />");
+        $("#my-panel").append("<br/><br/><br/><br/><a class='menuLink' href='.'>Attourneys</a>");
+        $("#my-panel").append("<br/><br/><a class='menuLink' href='.'>Cost Savings</a>");
+        $("#my-panel").append("<br/><br/><a class='menuLink' href='.'>Customer</a>");
+        $("#my-panel").append("<br/><br/><a class='menuLink' href='.'>Complaints / Grievances</a>");
+        $("#my-panel").append("<br/><br/><a class='menuLink' href='.'>Letters</a>");
+        $("#my-panel").append("<br/><br/><a class='menuLink' href='.'>Other Notes</a>");
+        $("#my-panel").append("<br/><br/><a class='menuLink' href='.'>Scorecard</a>");
+        $("#my-panel").append("<br/><br/><a class='menuLink' id='backLnk'>Back ...</a>");
+
+        $(".breadcrmb").empty();
+        $('#backLnk').click(mainItems);
+        var url = '@Url.Action("CaseMain","Case")';
+        $(".breadcrmb").append("<nav class='breadcrmb'><a href=" + url + " style='color: blue;cursor: pointer;'>Home</a> → Advanced</nav>");
+
+    }
+
+    function mainItems() {
+        var urlCP = '@Url.Action("CarePlan","CarePlan")';
+
+        $("#my-panel").empty();
+
+        $("#my-panel").append("<img src='../Images/Logo.jpg' />");
+        $("#my-panel").append("<br/><br/><br/><br/><a class='menuLink' href='.'>Activities</a>");
+        $("#my-panel").append("<br/><br/><a class='menuLink' href='.'>Billing</a>");
+        $("#my-panel").append("<br/><br/><a class='menuLink' href=" + urlCP + ">Care Plan</a>");
+        $("#my-panel").append("<br/><br/><a class='menuLink' href='.'>Case</a>");
+        $("#my-panel").append("<br/><br/><a class='menuLink' href='.'>Claimant</a>");
+        $("#my-panel").append("<br/><br/><a class='menuLink' href='.'>Product Data</a>");
+        $("#my-panel").append("<br/><br/><a id='advLink' class='menuLink' >Advanced...</a>");
+
+        $(".breadcrmb").empty();
+        $(".breadcrmb").append("<nav class='breadcrmb'>Home</nav>");
+
+        $('#advLink').click(advancedItems);
+    }
+
+</script>  
+
+<nav class="breadcrmb"></nav>

@@ -1,0 +1,21 @@
+﻿<script>      
+    $(document).ready(function () {
+
+//            $('#my-link').click();
+        $("#my-panel").empty();
+
+        $("#my-panel").append("<img src='../Images/Logo.jpg' />");
+        $("#my-panel").append("<br/><br/><br/><br/><a class='menuLink' hfre='.'>Attourneys</a>");
+        $("#my-panel").append("<br/><br/><a class='menuLink' hfre='.'>Cost Savings</a>");
+        $("#my-panel").append("<br/><br/><a class='menuLink' hfre='.'>Customer</a>");
+        $("#my-panel").append("<br/><br/><a class='menuLink' hfre='.'>Complaints / Grievances</a>");
+        $("#my-panel").append("<br/><br/><a class='menuLink' hfre='.'>Letters</a>");
+        $("#my-panel").append("<br/><br/><a class='menuLink' hfre='.'>Other Notes</a>");
+        $("#my-panel").append("<br/><br/><a class='menuLink' hfre='.'>Scorecard</a>");
+        $('#my-link').click();
+//            $("#caseHeaderId").append("<ul style='list-style-type:none'><li>Claimant: <a hfre='.' style='color: blue;cursor: pointer;'><span>Ross Morgan</span></a></li><li>Case: <a hfre='.' style='color: blue;cursor: pointer;'><span>ZS08T5</span></a></li></ul>");
+    });
+
+</script>  
+
+<nav class="breadcrumb"><a  href="@Url.Action("CaseMain", "Case")" style="color:blue">Home</a> → Advanced</nav>
